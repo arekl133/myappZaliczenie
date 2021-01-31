@@ -6,7 +6,15 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var adduserRouter = require('./routes/adduser');
+var comment1Router = require('./routes/comment1');
+var commentRouter = require('./routes/comment');
+
+
+
+var db = require('./db');
+const { ObjectId } = require('mongodb');
+
+db.connect();
 
 
 
@@ -17,15 +25,29 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(function(req, res, next) {
+  req.db = db.client;
+  next();
+});
+
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/adduser', adduserRouter);
+app.use('/', comment1Router);
+app.use('/', commentRouter);
+
+
+
 
 
 

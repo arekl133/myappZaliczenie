@@ -1,0 +1,51 @@
+<div class="container d-flex flex-column justify-content-center align-items-center col-12 col-md-12 col-sm-12 col-lg-8 col-xl-8" ></div>
+<h1>Specjalization</h1>
+
+<form class="form-inline d-flex justify-content-center" action="/formproblem1" method="GET">
+{{!-- <label for="">Find Specjalization:</label> --}}
+    <input type="text" name="search" value="{{search}}"/>
+    <input type="hidden" name="sort" value="{{sort}}"/>
+    <input class="btn btn-secondary" type="submit" value="SEARCH"/>
+    
+</form>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th class="th">Full Name</th>
+            <th class="th">Specjalization</th>
+            <th class="th">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each problemtab1}}
+        <tr>
+            <td>{{this.commentNick1}}</td>
+            <td>{{this.specadd}}</td>
+            <td>
+               
+                <a href="/formprob1-delete1?id={{this._id}}"><i class="fas fa-trash text-secondary"></i></a> 
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<div class="boxbutton">
+<div>
+    Znaleziono <span class="text-primary"> {{count }} </span> rekord(y/ów)
+</div>
+<div class="sort">
+    <div class="sort_sort">
+<a href="/formproblem1?sort=1"><i class="fas fa-sort-alpha-up"></i></a>
+<a href="/formproblem1?sort=-1"><i class="fas fa-sort-alpha-up-alt"></i></a>
+    </div>
+    <div class="sort_sort">
+<a href="/formproblem1?sort={{sort}}&page={{prevPage}}"><i class="fas fa-backward"></i></a>
+{{page}}
+<a href="/formproblem1?sort={{sort}}&page={{nextPage}}"><i class="fas fa-forward"></i></a>
+    </div>
+    </div>
+<a class="btn btn-secondary" href="/comment1">New</a>
+</div>
+</div>

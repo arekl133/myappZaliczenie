@@ -1,4 +1,42 @@
-<h1>{{title}}</h1>
-<p>Welcome to ttt {{title}}</p>
+ 
 
+{{#if team}}
+<div>Wpisałeś Full Name: {{team.teamName}}</div>
+<div>Wpisałeś Email: {{team.MyEmail}}</div>
+<div>Wpisałeś Age: {{team.MyAge}}</div>
+<div>Id: {{teamName._id}}</div>
+<div>Id: {{MyEmail._id}}</div>
+<div>Id: {{MyAge._id}}</div>
+<a href="/">Powrót</a>
+{{else}}
+<div >
+  
+<div class=" container d-flex justify-content-between col-md-8">  
+  <h1 class="col-6 col-md-8 col-sm-6 col-lg-6 col-xl-6" >Welcome!!</h1>  
+  <p class=" col-6 col-md-4 col-sm-6 col-lg-6 col-xl-6" >Hi! You must added now your new worker!</p>
+</div>
+
+<form class="row g-3 container d-flex justify-content-center" action="/team" method="post">
+
+    
+    {{!-- <label for="team_name">Full Name: </label> --}}
+    <input class="col-md-8" id="team_name" type="text" name="team_name" placeholder="full name..." value="{{team.teamName}}">
+    <input type="hidden" type="text" name="_id" value="{{team._id}}"/>
+    
+    
+    {{!-- <label for="my_age">Age: </label> --}}
+    <input class="col-md-8" id="my_age" type="number" name="my_age" placeholder="age..." value="{{team.MyAge}}">
+    
+    {{!-- <label for="email">Email: </label> --}}
+    <input class="col-md-8" id="email" type="email" name="email" placeholder="email" value="{{team.email}}">
+    
+    <div class="boxbutton col-md-8">
+       <button class="btn btn-secondary" type="submit" > Save</button>
+       <button class="btn btn-secondary"> <a href="/teams"></a>All List</button>
+    </div>
+    
+</form>
+
+</div>
+{{/if}}
 

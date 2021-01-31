@@ -1,0 +1,30 @@
+<div class="container d-flex flex-column justify-content-center align-items-center col-12 col-md-12 col-sm-12 col-lg-8 col-xl-8" ></div>
+
+<h1>Lista Skarg</h1>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th class="th">Nick</th>
+            <th class="th">Problem</th>
+            <th class="th">data</th>
+            <th class="th">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each problemtab}}
+        <tr>
+            <td>{{this.commentNick}}</td>
+            <td>{{this.warrningText}}</td>
+            <td>{{this.myDate}}</td>
+            <td>
+               
+                <a href="/problemtab-delete?id={{this._id}}"><i class="fas fa-trash text-secondary"></i></a> 
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="/comment">Add Problems</a>
+</div>
+

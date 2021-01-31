@@ -1,0 +1,30 @@
+<div class=" container d-flex justify-content-between col-md-8">  
+  <h1 class="col-6 col-md-8 col-sm-6 col-lg-6 col-xl-6" >Welcome!!</h1>  
+  <p class=" col-6 col-md-4 col-sm-6 col-lg-6 col-xl-6" >Hi! You must added now your problems!</p>
+</div>
+
+<form class="row g-3 container d-flex justify-content-center"  action="/formproblem" method="post">
+    
+    {{!-- <label for="comment_nick">Nick: </label> --}}
+    <input class="col-md-8" id="comment_nick" type="text" name="comment_nick" placeholder="Nick:" value="">
+    {{!-- <input type="hidden" type="text" name="_id" value="">  --}}
+    
+    {{!-- <label for="warrning">What a problem???</label> --}}
+    <input class="col-md-8" id="warrning" type="text" name="warrning" placeholder="What problem....?">
+    
+    <input class="col-md-8" id="my_date" type="date" name="my_date" placeholder="Date:" value="">
+
+    <div class="boxbutton col-md-8">
+        <input class="btn btn-secondary" type="submit" value="Zatwierdź"/>
+        <a class="btn btn-secondary" href="/formproblem">Spis Skarg</a> 
+    </div>
+</form>
+
+
+
+{{!-- <div>Wpisałes Nick: {{comm.commentNick}}</div>
+<div>Id: {{comm._id}}</div>
+<div>Problem....it's...hmmm: {{comm.warrningText}}</div> --}}
+
+
+

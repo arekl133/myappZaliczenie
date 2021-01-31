@@ -1,0 +1,21 @@
+
+<div class=" container d-flex justify-content-between col-md-8">  
+  <h1 class="col-6 col-md-8 col-sm-6 col-lg-6 col-xl-6" >Welcome!!</h1>  
+  <p class=" col-6 col-md-4 col-sm-6 col-lg-6 col-xl-6" >Hi! You must added now Specjalization!</p>
+</div>
+
+<form class="row g-3 container d-flex justify-content-center" action="/formproblem1" method="post">
+    
+    {{!-- <label for="comment_nick">Full Name: </label> --}}
+    <input class="col-md-8" id="comment_nick1" type="text" name="comment_nick1" placeholder="Full Name:" value="{{com1.commentNick1}}">
+    <input type="hidden" type="text" name="_id" value="{{commentNick1._id}}"> 
+    
+    {{!-- <label for="spec">Specialization:</label> --}}
+    <input class="col-md-8" id="spec" type="text" name="spec" placeholder="Specjalization..." value="{{com1.specadd}}">
+    
+<div class="boxbutton col-md-8">   
+   <input class="btn btn-secondary" type="submit" value="Zatwierdź"/>
+   <a class="btn btn-secondary" href="/formproblem1">All employees </a> 
+</div>   
+</form>
+

@@ -1,51 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  body {
-    width: 100vw;
-    height: auto;
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  }
-  
-#menu{
-    color:red;
-    width: 90vw;
+ul{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  #menu ul{
+    justify-content: space-around;
+    align-content: center ;
+}
+
+ul li a{
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.boxcontainer{
+    margin-top: 150px;
+}
+.boxbutton{
     width: 100%;
     display: flex;
-    justify-content:space-around;
-    background-color: black;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  #menu ul li{
+    align-items: center;
+    justify-content: space-between;
+    align-content: center ;
+}
+table{
+    margin-top: 30px;
+}
+td{
+    text-align: center;
+}
+.th{
+    text-align: center;
+}
+.sort{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.sort_sort a{
+    margin: 5px;
+    color: grey;
+}
+
+
+.info{
+    height: 80%;
+    color: white;
+    position: fixed;
+    left: 1px;
+    top: 85%;
     padding: 10px;
-    list-style-type: none;
-    border: 1px solid black;
-    width: 100%;
-    padding: 2px;
-    margin: 3px;
-  }
-  
-  #menu ul li a{
-    text-decoration: none;
-    font-size: 1.2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: rgb(175, 154, 154);
-  }
-  
-  #menu ul li a:hover{
-    color:white;
-  }
+}
+    
+    .info i{
+    font-size: 2.0rem;
+    color: #000808;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+    .info i:hover{
+    color: #17bbc7;
+    transition: .3s;
+    }
+    footer{
+    display:flex;
+    flex-direction: ;
+    }
+    .info footer a{
+    margin-top: 20px;
+    }
+    
+    p span { 
+    display: block; 
+    text-transform: uppercase; 
+    font-size: 1.5rem; 
+    width: 13px; 
+    text-align: center; 
+    line-height: 1.2em; 
+    padding: 10px;
+    color: #02676e;
+    }
+    
